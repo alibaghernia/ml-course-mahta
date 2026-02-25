@@ -1,0 +1,182 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import StatusBadge from "../../components/StatusBadge.astro";
+import ContentCard from "../../components/ContentCard.astro";
+import ActionButton from "../../components/ActionButton.astro";
+import Sponsors from "../../components/Sponsors.astro";
+
+// -- Configuration: Update these values --
+const applicantName = " داوطلب";
+const registrationLink = "#"; // لینک ثبت‌نام نهایی و پرداخت
+---
+
+<BaseLayout
+    title="نتیجه مصاحبه - پذیرفته شده"
+    description="تبریک! شما در مصاحبه دوره ML پذیرفته شدید."
+>
+    <!-- Greeting & Status -->
+    <div
+        class="mb-8 text-center"
+        x-data="{ show: false }"
+        x-init="setTimeout(() => show = true, 100)"
+    >
+        <div
+            x-show="show"
+            x-transition:enter="transition ease-out duration-500"
+            x-transition:enter-start="opacity-0 translate-y-4"
+            x-transition:enter-end="opacity-100 translate-y-0"
+        >
+            <h2
+                class="text-2xl sm:text-3xl font-extrabold text-[var(--color-foreground)] text-balance"
+            >
+                دوره پایتون
+            </h2>
+        </div>
+    </div>
+
+    <!-- Content Sections -->
+    <div class="space-y-6">
+        <!-- Interview Result Details -->
+        <!--      
+    <ContentCard title="نتیجه ارزیابی">
+      <svg
+        slot="icon"
+        class="w-5 h-5 text-[var(--color-primary)]"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15a2.25 2.25 0 0 1 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25Z"
+        ></path>
+      </svg>
+
+      
+      <p>
+        
+      </p>
+    </ContentCard> -->
+
+        <!-- Course Details -->
+        <ContentCard title="جزئیات دوره">
+            <svg
+                slot="icon"
+                class="w-5 h-5 text-[var(--color-primary)]"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342"
+                ></path>
+            </svg>
+
+            <!-- Add your course details here -->
+            <p>
+                <!-- توضیحات مربوط به شرایط دوره، زمان‌بندی، سرفصل‌ها و ... -->
+                <b class="font-bold"> تعداد جلسات: </b>
+                ۸ جلسه آموزشی ۳ ساعته
+                <br />
+                <b class="font-bold"> زمان برگزاری: </b>
+                از ۷ اسفند تا ۲۵ اسفند
+                <br />
+                <span class="flex gap-1 items-center">
+                    <span>
+                        <b class="font-bold"> مدرس: </b>
+                    </span>
+
+                    <a
+                        href="https://www.linkedin.com/in/ali-baghernia/"
+                        target="_blank"
+                        class="flex gap-1 items-center justify-center hover:underline text-[var(--color-primary)]"
+                    >
+                        <span> علی باقرنیا </span>
+                        <svg
+                            class="w-4 h-4"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                            ></path>
+                        </svg>
+                    </a>
+                </span>
+            </p>
+        </ContentCard>
+
+        <!-- Important Notes -->
+        <ContentCard title="سرفصل های هر جلسه">
+            <svg
+                slot="icon"
+                class="w-5 h-5 text-[var(--color-primary)]"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342"
+                ></path>
+            </svg>
+            <!-- Add important notes here -->
+            <p>
+                <!-- نکات مهم و یادآوری‌ها -->
+                <span class="flex gap-1 items-center">
+                    <span>
+                        <b class="font-bold"> جلسه اول </b>
+                    </span>
+
+                    <a
+                        href="/python-course/session-1"
+                        class="flex gap-1 items-center justify-center hover:underline text-[var(--color-primary)]"
+                    >
+                        <span> مشاهده</span>
+                        <svg
+                            class="w-4 h-4"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                            ></path>
+                        </svg>
+                    </a>
+                </span>
+                شروع با نگاهی عمیق به مقدمات: نصب پایتون، خط فرمان، راه اندازی محیط
+                توسعه، انواع داده و کمی بیشتر
+                <br />
+
+                <div
+                    class="bg-gray-300 w-[30%] h-[0.5px] !mx-auto !my-4 rounded-lg"
+                >
+                </div>
+
+                <br />
+                <b>
+                جلسه دوم 
+                </b>
+                به زودی...
+            </p>
+        </ContentCard>
+    </div>
+
+    <!-- Sponsors -->
+    <Sponsors slot="sponsors" />
+</BaseLayout>
