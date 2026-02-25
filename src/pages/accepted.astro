@@ -7,7 +7,7 @@ import Sponsors from "../components/Sponsors.astro";
 
 // -- Configuration: Update these values --
 const applicantName = " داوطلب";
-const registrationLink = "#"; // لینک ثبت‌نام نهایی و پرداخت
+const registrationLink = "https://mehrandishngo.ir/machine-learning/"; // لینک ثبت‌نام نهایی و پرداخت
 ---
 
 <BaseLayout
@@ -26,12 +26,10 @@ const registrationLink = "#"; // لینک ثبت‌نام نهایی و پردا
       x-transition:enter-start="opacity-0 translate-y-4"
       x-transition:enter-end="opacity-100 translate-y-0"
     >
-      <p class="text-[var(--color-muted-foreground)] mb-3">
-        {applicantName} عزیز،
-      </p>
-      <div class="flex justify-center mb-4">
+      <p class="text-[var(--color-muted-foreground)] mb-3">داوطلب عزیز</p>
+      <!-- <div class="flex justify-center mb-4">
         <StatusBadge variant="success" label="پذیرفته شده" />
-      </div>
+      </div> -->
       <h2
         class="text-2xl sm:text-3xl font-extrabold text-[var(--color-foreground)] text-balance"
       >
@@ -86,15 +84,21 @@ const registrationLink = "#"; // لینک ثبت‌نام نهایی و پردا
       <!-- Add your course details here -->
       <p>
         <!-- توضیحات مربوط به شرایط دوره، زمان‌بندی، سرفصل‌ها و ... -->
-        دوره شامل ۱۳ جلسه آموزشی است
+        <b class="font-bold"> تعداد جلسات: </b>
+        ۱۳ جلسه آموزشی دو ساعت و سی دقیقه ای
         <br />
-        زمان برگزاری: از اواسط فروردین تا انتهای اردیبهشت
+        <b class="font-bold"> زمان برگزاری: </b>
+        از اواسط فروردین تا انتهای اردیبهشت
         <br />
         <span class="flex gap-1 items-center">
-          <span>مدرس:</span>
+          <span>
+            <b class="font-bold"> مدرس: </b>
+          </span>
 
-          <a href="https://www.linkedin.com/in/sabiloo/" target="_blank"
-           class="flex gap-1 items-center justify-center hover:underline text-[var(--color-primary)]"
+          <a
+            href="https://www.linkedin.com/in/sabiloo/"
+            target="_blank"
+            class="flex gap-1 items-center justify-center hover:underline text-[var(--color-primary)]"
           >
             <span> مصطفی سبیلو </span>
             <svg
@@ -114,12 +118,16 @@ const registrationLink = "#"; // لینک ثبت‌نام نهایی و پردا
         </span>
 
         <span class="flex gap-1 items-center">
-          <span>مشاهده</span>
+          <span>
+            <b class="font-bold"> سرفصل های دوره: </b>
+          </span>
 
-          <a href="/outline.pdf" target="_blank"
-           class="flex gap-1 items-center justify-center hover:underline text-[var(--color-primary)]"
+          <a
+            href="https://B2n.ir/ml101"
+            target="_blank"
+            class="flex gap-1 items-center justify-center hover:underline text-[var(--color-primary)]"
           >
-            <span> سرفصل های دوره</span>
+            <span>مشاهده</span>
             <svg
               class="w-4 h-4"
               fill="none"
@@ -135,7 +143,6 @@ const registrationLink = "#"; // لینک ثبت‌نام نهایی و پردا
             </svg>
           </a>
         </span>
-     
       </p>
     </ContentCard>
 
