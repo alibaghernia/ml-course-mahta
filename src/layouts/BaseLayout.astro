@@ -7,7 +7,10 @@ interface Props {
   description?: string;
 }
 
-const { title, description = "نتایج مصاحبه دوره یادگیری ماشین" } = Astro.props;
+const {
+  title,
+  description = "دوره یادگیری ماشین مدرس مصطفی سبیلو | دوره پایتون مدرس علی باقرنیا",
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -17,6 +20,19 @@ const { title, description = "نتایج مصاحبه دوره یادگیری م
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <title>{title}</title>
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="دوره یادگیری ماشین و پایتون | مهتا" />
+    <meta
+      property="og:description"
+      content="دوره یادگیری ماشین و پایتون با تدریس مصطفی سبیلو و علی باقرنیا با همکاری طرح مهتا"
+    />
+    <!-- <meta property="og:image" content="image.jpg" /> -->
+    <!-- <meta property="og:url" content="https://example.com" /> -->
+    <meta property="og:type" content="website" />
+    <meta
+      name="keywords"
+      content="دوره یادگیری ماشین، دوره پایتون، مهتا، مصطفی سبیلو، علی باقرنیا"
+    />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body
