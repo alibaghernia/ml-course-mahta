@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pages = [
+  {
+    title: 'پذیرفته شده - دوره ML',
+    description: 'قبول شده در مصاحبه، با لینک ثبت‌نام نهایی و پرداخت',
+    href: '/accepted',
+    color: 'var(--color-success)',
+    bg: 'var(--color-success-bg)',
+  },
+  {
+    title: 'پذیرفته شده - با پیش‌نیاز پایتون',
+    description: 'قبول شده با لینک ثبت‌نام ML و لینک گروه تلگرام دوره پایتون',
+    href: '/accepted-with-python',
+    color: 'var(--color-primary)',
+    bg: 'var(--color-accent)',
+  },
+  {
+    title: 'دعوت به دوره پایتون',
+    description: 'فقط لینک گروه تلگرام پایتون، در صورت عملکرد خوب پذیرش در ML',
+    href: '/python-only',
+    color: 'var(--color-info)',
+    bg: 'var(--color-info-bg)',
+  },
+];
+---
+
+<BaseLayout title="قالب‌های نتیجه مصاحبه دوره ML">
+
+  <div class="text-center mb-10">
+    <h2 class="text-2xl sm:text-3xl font-extrabold text-[var(--color-foreground)] mb-3 text-balance">
+      قالب‌های اطلاع‌رسانی نتایج مصاحبه
+    </h2>
+    <p class="text-[var(--color-muted-foreground)]">
+      سه قالب مختلف بر اساس نتیجه ارزیابی مصاحبه‌شوندگان
+    </p>
+  </div>
+
+  <div class="space-y-4">
+    {pages.map((page) => (
+      <a
+        href={page.href}
+        class="block bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-6 hover:border-[var(--color-primary)]/40 transition-colors duration-200 group"
+      >
+        <div class="flex items-start gap-4">
+          <div
+            class="w-3 h-3 rounded-full mt-1.5 shrink-0"
+            style={`background-color: ${page.color}`}
+          />
+          <div>
+            <h3 class="text-base font-bold text-[var(--color-foreground)] group-hover:text-[var(--color-primary)] transition-colors">
+              {page.title}
+            </h3>
+            <p class="text-sm text-[var(--color-muted-foreground)] mt-1">
+              {page.description}
+            </p>
+          </div>
+          <svg class="w-5 h-5 text-[var(--color-muted-foreground)] group-hover:text-[var(--color-primary)] shrink-0 mr-auto transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+          </svg>
+        </div>
+      </a>
+    ))}
+  </div>
+
+</BaseLayout>
