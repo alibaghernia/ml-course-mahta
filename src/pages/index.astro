@@ -2,38 +2,53 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pages = [
-  {
-    title: 'پذیرفته شده - دوره ML',
-    description: 'قبول شده در مصاحبه، با لینک ثبت‌نام نهایی و پرداخت',
-    href: '/accepted',
-    color: 'var(--color-success)',
-    bg: 'var(--color-success-bg)',
+  // {
+  //   title: 'پذیرفته شده - دوره ML',
+  //   description: 'قبول شده در مصاحبه، با لینک ثبت‌نام نهایی و پرداخت',
+  //   href: '/accepted',
+  //   color: 'var(--color-success)',
+  //   bg: 'var(--color-success-bg)',
+  // },
+  // {
+  //   title: 'پذیرفته شده - با پیش‌نیاز پایتون',
+  //   description: 'قبول شده با لینک ثبت‌نام ML و لینک گروه تلگرام دوره پایتون',
+  //   href: '/accepted-with-python',
+  //   color: 'var(--color-primary)',
+  //   bg: 'var(--color-accent)',
+  // },
+  // {
+  //   title: 'دعوت به دوره پایتون',
+  //   description: 'فقط لینک گروه تلگرام پایتون، در صورت عملکرد خوب پذیرش در ML',
+  //   href: '/python-only',
+  //   color: 'var(--color-info)',
+  //   bg: 'var(--color-info-bg)',
+  // },
+  // 
+    {
+    title: 'سرفصل های دوره پایتون',
+    description: 'به زودی سرفصل های تمام جلسات دوره پایتون به این صفحه اضافه خواهد شد...',
+    href: '/python-course',
+    color: 'var(--color-info)',
+    bg: 'var(--color-info-bg)',
   },
-  {
-    title: 'پذیرفته شده - با پیش‌نیاز پایتون',
-    description: 'قبول شده با لینک ثبت‌نام ML و لینک گروه تلگرام دوره پایتون',
-    href: '/accepted-with-python',
-    color: 'var(--color-primary)',
-    bg: 'var(--color-accent)',
-  },
-  {
-    title: 'دعوت به دوره پایتون',
-    description: 'فقط لینک گروه تلگرام پایتون، در صورت عملکرد خوب پذیرش در ML',
-    href: '/python-only',
+      {
+    title: 'سرفصل های دوره ML یادگیری ماشین',
+    description: 'سرفصل هایی که در دوره تدریس خواهد شد',
+    href: 'https://B2n.ir/ml101',
     color: 'var(--color-info)',
     bg: 'var(--color-info-bg)',
   },
 ];
 ---
 
-<BaseLayout title="قالب‌های نتیجه مصاحبه دوره ML">
+<BaseLayout title="دوره یادگیری ماشین | مهتا">
 
   <div class="text-center mb-10">
     <h2 class="text-2xl sm:text-3xl font-extrabold text-[var(--color-foreground)] mb-3 text-balance">
-      قالب‌های اطلاع‌رسانی نتایج مصاحبه
+      جزئیات دوره های پایتون و یادگیری ماشین
     </h2>
     <p class="text-[var(--color-muted-foreground)]">
-      سه قالب مختلف بر اساس نتیجه ارزیابی مصاحبه‌شوندگان
+      تمام اطلاع رسانی ها و تمرین ها در این سایت قرار خواهد گرفت
     </p>
   </div>
 
